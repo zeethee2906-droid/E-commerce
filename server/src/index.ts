@@ -3,6 +3,7 @@ import authRoute from "./features/auth/auth.route";
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import productRoute from "./features/poducts/product.route";
+import orderRoute from "./features/orders/order.route";
 
 const server = express();
 
@@ -17,6 +18,7 @@ server.use(cookieParser());
 
 server.use("/auth",authRoute)
 server.use("/product",productRoute)
+server.use("/order",orderRoute)
 
 server.listen("3000",() => {
   console.log("Server is running in port 3000...")

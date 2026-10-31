@@ -12,7 +12,7 @@ const Navbar = () => {
   const menu = [
     { id: 1,role:["ADMIN","USER"], name: "Products", path: "/dashboard" },
     { id: 2,role:["ADMIN"], name: "Orders", path: "/dashboard/order" },
-    { id: 1,role:["ADMIN"], name: "Add Products", path: "/dashboard/add-products" },
+    { id: 3,role:["ADMIN"], name: "Add Products", path: "/dashboard/add-products" },
   ];
 
    const visibleMenu = menu.filter((i) => {

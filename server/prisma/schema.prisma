@@ -41,7 +41,7 @@ model User {
 model Product {
   id Int @id @default(autoincrement())
   name String
-  description String
+  description String @db.Text
   price Decimal
   stock Int
   image String
@@ -67,7 +67,7 @@ model OrderItem {
   id Int @id @default(autoincrement())
   orderId Int
   productId Int
-  quality Int
+  quantity Int
   price Decimal @db.Decimal(10,2)
   order Order @relation(fields: [orderId],references: [id])
   product Product @relation(fields: [productId],references: [id])
